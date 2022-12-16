@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="col my-5">
+            <form method="POST" action="test2" enctype="multipart/form-data">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Input File:</h4>
+                        <input class="form-control" type="file" name="csv_file">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="fw-bold text-center">Choose Classifier</h5>
+                                    <div class="row mt-3">
+                                        <div class="col mt-3 fw-bold">
+                                            <input class="form-check-input" type="radio" name="model" value="naive_bayes"> <label class="me-3">Naive Bayes</label>
+                                        </div>
+                                        <div class="col mt-3 fw-bold">
+                                            <input class="form-check-input" type="radio" name="model" value="decision_tree"> <label class="me-3">Decision Tree</label>
+                                        </div>
+                                        <div class="col mt-3 fw-bold">
+                                            <input class="form-check-input" type="radio" name="model" value="ann"> <label class="me-3">ANN</label>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="row mt-3">
+                                        <div class="col mt-3 fw-bold">
+                                            <input class="form-check-input" type="radio" name="model" value="knn"> <label class="me-2">KNN</label>
+                                        </div>
+                                        <div class="col mt-3 fw-bold">
+                                            <input class="form-check-input" type="radio" name="model" value="svm"> <label class="me-2">SVM</label>
+                                        </div>
+                                        <div class="col mt-3 fw-bold">
+                                            <input class="form-check-input" type="radio" name="model" value="linear"> <label>Linear Regression</label>
+                                    </div>-->
+
+                                </div>
+                                <div class="col">
+                                    <h5 class="fw-bold text-center">Result</h5>
+                                    <div class="col mt-3">
+                                        <h5>Inputs: {{rows}}</h5>
+                                    </div>
+                                    <div class="col mt-3">
+                                        <h5>Prediction: {{predict}}</h5>
+                                    </div>
+                                    <!-- <div class="col mt-3">
+                                        <h5>Prediction: {{result}}</h5>
+                                    </div>
+                                    <div class="col mt-3">
+                                        <h5>Classfication: {{predict}}</h5>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button class="btn w-50 btn-success my-4" id="classify" type="submit">Classify</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>
